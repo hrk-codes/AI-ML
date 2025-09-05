@@ -1,0 +1,118 @@
+version: "3.1"
+
+nlu:
+
+- intent: report_symptoms
+  examples: |
+    - I feel irritation on my [skin](symptom)
+    - I have [redness](symptom) on my hands
+    - there is [swelling](symptom) on my face
+    - I have continuous [sneezing](symptom)
+    - I am suffering from [fever](symptom) and [body pain](symptom)
+    - I can’t stop [coughing](symptom)
+    - I have [watery stool](symptom) since morning
+    - my throat feels [sore](symptom)
+    - I feel [weakness](symptom) and [hot](symptom)
+
+    # Allergy (general case)
+    - I am suffering from itching
+    - I feel itching
+    - itching
+    - itchy skin
+    - I am suffering from [itching](symptom)
+    - I have [swelling](symptom)
+    - I have [redness](symptom) on my skin
+    - I am suffering from [itching](symptom) and [swelling](symptom)
+    - [itching](symptom) and [redness](symptom)
+    - I feel [irritation](symptom) on my skin
+    - there are [rashes](symptom) on my body
+    - my skin is itchy
+    - skin irritation
+    - I have skin irritation
+    - I am suffering from skin irritation
+
+    # Food allergy
+    - I feel [itching](symptom) after eating peanuts
+    - [swelling](symptom) after having seafood
+    - my [lips swelling](symptom) after eating food
+    - my throat feels [tight](symptom) after a meal
+    - I feel [nausea](symptom) after eating certain foods
+    - food makes me [vomit](symptom) and [itch](symptom)
+    - I feel [rashes](symptom) after milk
+    - I have [stomach pain](symptom) after food
+    - my [tongue swelling](symptom) when I eat something
+
+    # Dust allergy
+    - [sneezing](symptom) when exposed to dust
+    - my nose gets [blocked](symptom) when I clean the room
+    - I have [runny nose](symptom) in dusty areas
+    - [coughing](symptom) in dusty surroundings
+    - I feel [throat irritation](symptom) when there is dust
+    - I can’t stop [sneezing](symptom) after sweeping
+    - my eyes get [red](symptom) in dust
+    - my nose feels [itchy](symptom) in dust
+    - [difficulty breathing](symptom) when I go outside
+
+    # Eye allergy
+    - my eyes are [red](symptom)
+    - [itching](symptom) in my eyes
+    - [watery eyes](symptom)
+    - I have [burning sensation](symptom) in my eyes
+    - my eyes are [swollen](symptom)
+    - I am suffering from [eye irritation](symptom)
+    - I feel [discomfort](symptom) in my eyes
+    - I have [watery eyes](symptom) and [itching](symptom)
+    - [swelling](symptom) around my eyes
+
+    # Drug allergy
+    - I get [rashes](symptom) after taking medicine
+    - my [lips swell](symptom) after a pill
+    - I feel [itching](symptom) after antibiotics
+    - I have [breathing problem](symptom) after injection
+    - my skin turns [red](symptom) after a tablet
+    - I [vomited](symptom) after medicine
+    - I feel [dizziness](symptom) after taking drug
+    - [swelling](symptom) in face after injection
+    - my eyes [swell](symptom) after medicine
+
+    # Seasonal allergy
+    - I start [sneezing](symptom) every spring
+    - I feel [unwell](symptom) during pollen season
+    - my nose gets [blocked](symptom) during winter
+    - I get [watery eyes](symptom) during change of weather
+    - I have [seasonal sneezing](symptom)
+    - every summer I feel [itchy](symptom)
+    - I get [runny nose](symptom) in monsoon
+    - change in season gives me [allergy](symptom)
+    - weather change makes me [sneeze](symptom)
+    - I have [breathing problems](symptom) during season change
+
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - take care
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - that’s right
+    - correct
+    - sure
+
+- intent: deny
+  examples: |
+    - no
+    - not really
+    - nope
+    - I don’t think so

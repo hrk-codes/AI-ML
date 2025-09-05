@@ -1,0 +1,24 @@
+version: "3.1"
+stories:
+
+- story: greet and report symptoms
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: report_symptoms
+    - action: utter_confirm_symptoms
+
+- story: user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: user affirms
+  steps:
+    - intent: affirm
+    - action: utter_affirm
+
+- story: user denies
+  steps:
+    - intent: deny
+    - action: utter_deny

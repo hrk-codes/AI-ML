@@ -1,0 +1,90 @@
+version: "3.1"
+
+intents:
+  - report_symptoms
+  - greet
+  - goodbye
+  - affirm
+  - deny
+
+entities:
+  - symptom
+
+slots:
+  symptom:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: symptom
+
+responses:
+  utter_greet:
+    - text: "Hello! 👋 I am your health assistant. Please describe your symptoms."
+
+  utter_goodbye:
+    - text: "Take care! Wishing you good health. 😊"
+
+  utter_fallback:
+    - text: "Sorry, I didn’t understand that. Can you describe your health issue in simple words?"
+
+  utter_confirm_symptoms:
+    - text: "Got it. You mentioned {symptom}. Can you tell me more about your symptoms?"
+
+  utter_ask_more_symptoms:
+    - text: "Can you please describe if you have other symptoms too?"
+
+  utter_possible_allergy:
+    - text: "Based on your symptoms, this may be an allergy. Would you like to know more?"
+
+  utter_report_symptoms:
+    - text: "Please describe your symptoms so I can understand better."
+
+  utter_general_allergy:
+    - text: "It seems like a general allergy. Avoid triggers and consult a doctor if needed."
+
+  utter_food_allergy:
+    - text: "This looks like a food allergy. Please avoid that food and consult a doctor if it worsens."
+
+  utter_dust_allergy:
+    - text: "Dust allergies are common. Try wearing a mask in dusty areas and keep surroundings clean."
+
+  utter_eye_allergy:
+    - text: "Eye allergy detected. Wash your eyes with clean water and avoid rubbing them."
+
+  utter_drug_allergy:
+    - text: "This looks like a reaction to medication. Please stop the drug and consult a doctor immediately."
+
+  utter_skin_allergy:
+    - text: "Skin allergy detected. Keep the area clean, avoid scratching, and consult a doctor if it spreads."
+
+  utter_seasonal_allergy:
+    - text: "This seems like a seasonal allergy. Stay indoors when pollen count is high and consider using a mask."
+
+  utter_affirm:
+    - text: "Okay, great 👍. Let’s continue."
+
+  utter_deny:
+    - text: "Alright, I won’t proceed with that."
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_fallback
+  - utter_confirm_symptoms
+  - utter_ask_more_symptoms
+  - utter_possible_allergy
+  - utter_report_symptoms
+  - utter_general_allergy
+  - utter_food_allergy
+  - utter_dust_allergy
+  - utter_eye_allergy
+  - utter_drug_allergy
+  - utter_skin_allergy
+  - utter_seasonal_allergy
+  - utter_affirm
+  - utter_deny
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
