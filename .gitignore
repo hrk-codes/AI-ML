@@ -1,7 +1,7 @@
-# Ignore virtual environment folder
+# Python virtual environment
 venv/
 
-# Python cache files
+# Bytecode files
 __pycache__/
 *.pyc
 *.pyo
@@ -13,11 +13,11 @@ __pycache__/
 # macOS files
 .DS_Store
 
-# Rasa specific cache and models
+# Rasa-specific files
 .rasa/
 models/
 
-# Logs and database files
+# Logs and databases
 *.log
 *.sqlite3
 *.tar.gz
