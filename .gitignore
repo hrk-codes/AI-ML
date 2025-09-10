@@ -13,11 +13,11 @@ __pycache__/
 # macOS files
 .DS_Store
 
-# Rasa specific
+# Rasa specific cache and models
 .rasa/
 models/
 
-# Logs and other unwanted files
+# Logs and database files
 *.log
 *.sqlite3
 *.tar.gz
