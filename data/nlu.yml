@@ -1,91 +1,108 @@
 version: "3.1"
-
 nlu:
-
-- intent: report_symptoms
+# NEW, LARGER SYNONYM LIST TO HANDLE TYPOS
+- synonym: watery eyes
   examples: |
-    - I feel irritation on my [skin](symptom)
-    - I have [redness](symptom) on my hands
-    - there is [swelling](symptom) on my face
-    - I have continuous [sneezing](symptom)
-    - I am suffering from [fever](symptom) and [body pain](symptom)
-    - I can’t stop [coughing](symptom)
-    - I have [watery stool](symptom) since morning
-    - my throat feels [sore](symptom)
-    - I feel [weakness](symptom) and [hot](symptom)
+    - watery
+    - wtery eyes
+    - watery eye
+- synonym: swelling
+  examples: |
+    - swollen
+- synonym: fever
+  examples: |
+    - fevver
+    - temprature
+- synonym: runny nose
+  examples: |
+    - runnnyy nose
+    - runy nose
+- synonym: sore throat
+  examples: |
+    - sore thoroat
+    - sore throate
+    - throat pain
+- synonym: cough
+  examples: |
+    - coughing
+- synonym: headache
+  examples: |
+    - head ache
+- synonym: dizziness
+  examples: |
+    - dizzy
 
-    # Allergy (general case)
-    - I am suffering from itching
-    - I feel itching
-    - itching
-    - itchy skin
+- intent: inform_symptom
+  examples: |
+    # --- Allergy Symptoms ---
     - I am suffering from [itching](symptom)
+    - my whole body is [itchy](symptom)
     - I have [swelling](symptom)
-    - I have [redness](symptom) on my skin
-    - I am suffering from [itching](symptom) and [swelling](symptom)
-    - [itching](symptom) and [redness](symptom)
-    - I feel [irritation](symptom) on my skin
     - there are [rashes](symptom) on my body
-    - my skin is itchy
-    - skin irritation
-    - I have skin irritation
-    - I am suffering from skin irritation
-
-    # Food allergy
-    - I feel [itching](symptom) after eating peanuts
-    - [swelling](symptom) after having seafood
-    - my [lips swelling](symptom) after eating food
-    - my throat feels [tight](symptom) after a meal
-    - I feel [nausea](symptom) after eating certain foods
-    - food makes me [vomit](symptom) and [itch](symptom)
-    - I feel [rashes](symptom) after milk
-    - I have [stomach pain](symptom) after food
-    - my [tongue swelling](symptom) when I eat something
-
-    # Dust allergy
-    - [sneezing](symptom) when exposed to dust
-    - my nose gets [blocked](symptom) when I clean the room
-    - I have [runny nose](symptom) in dusty areas
-    - [coughing](symptom) in dusty surroundings
-    - I feel [throat irritation](symptom) when there is dust
-    - I can’t stop [sneezing](symptom) after sweeping
-    - my eyes get [red](symptom) in dust
-    - my nose feels [itchy](symptom) in dust
-    - [difficulty breathing](symptom) when I go outside
-
-    # Eye allergy
-    - my eyes are [red](symptom)
-    - [itching](symptom) in my eyes
-    - [watery eyes](symptom)
-    - I have [burning sensation](symptom) in my eyes
+    - I have some [skin irritation](symptom)
+    - My [tongue is swelling](symptom:tongue swelling)
+    - My eyes are [red](symptom)
+    - i have [red eyes](symptom:red)
+    - I have [watery eyes](symptom)
+    - my eyes are [watery](symptom)
+    - i have [watery eyes](symptom) during pollen season
+    - there is a [burning sensation](symptom) in my eyes
     - my eyes are [swollen](symptom)
-    - I am suffering from [eye irritation](symptom)
-    - I feel [discomfort](symptom) in my eyes
-    - I have [watery eyes](symptom) and [itching](symptom)
-    - [swelling](symptom) around my eyes
-
-    # Drug allergy
-    - I get [rashes](symptom) after taking medicine
-    - my [lips swell](symptom) after a pill
-    - I feel [itching](symptom) after antibiotics
-    - I have [breathing problem](symptom) after injection
-    - my skin turns [red](symptom) after a tablet
-    - I [vomited](symptom) after medicine
-    - I feel [dizziness](symptom) after taking drug
-    - [swelling](symptom) in face after injection
-    - my eyes [swell](symptom) after medicine
-
-    # Seasonal allergy
-    - I start [sneezing](symptom) every spring
-    - I feel [unwell](symptom) during pollen season
-    - my nose gets [blocked](symptom) during winter
-    - I get [watery eyes](symptom) during change of weather
-    - I have [seasonal sneezing](symptom)
-    - every summer I feel [itchy](symptom)
+    - my eyes are [swelling](symptom)
+    - I have some [eye irritation](symptom)
+    - My [lips swell](symptom)
+    - I have a [breathing problem](symptom)
+    - i have [breathing problems](symptom) during season change
+    # --- Fever Symptoms ---
+    - I feel [nausea](symptom) after eating
+    - I have [stomach pain](symptom) after food
+    - I keep [sneezing](symptom)
+    - my nose is [blocked](symptom)
+    - I have a [runny nose](symptom)
+    - I can't stop [coughing](symptom)
+    - I feel [dizziness](symptom)
+    - my nose gets [blocked during winter](symptom:blocked nose)
     - I get [runny nose](symptom) in monsoon
-    - change in season gives me [allergy](symptom)
-    - weather change makes me [sneeze](symptom)
-    - I have [breathing problems](symptom) during season change
+    - I think I have a [high fever](symptom)
+    - my temperature is very high
+    - suffering from a severe [headache](symptom)
+    - I have terrible [joint pain](symptom)
+    - my joints are aching
+    - my muscles are very sore, I have [muscle pain](symptom)
+    - I feel [pain behind my eyes](symptom)
+    - I'm feeling very tired and have [weakness](symptom)
+    - I don't feel like eating, I have [loss of appetite](symptom)
+    - I have a [fever](symptom)
+    - my [throat is sore](symptom:sore throat)
+    - my whole body hurts, I have [body aches](symptom)
+    - I feel extreme [fatigue](symptom)
+    - I am having terrible [chills](symptom)
+    - I can't stop shivering and I feel cold
+    - I'm [sweating](symptom) a lot
+    - my cough has phlegm
+    - I am [coughing up phlegm](symptom:cough with phlegm)
+    - It's hard to breathe, I have [shortness of breath](symptom)
+    - I have some [chest pain](symptom) when I breathe
+    - It is just a [mild fever](symptom)
+    # --- Multi-Symptom Examples ---
+    - I have [rashes](symptom) and [dizziness](symptom)
+    - My symptoms are [sneezing](symptom) and a [runny nose](symptom)
+    - I feel [dizziness](symptom) and I have a [breathing problem](symptom)
+    - [red](symptom) eyes and [swelling](symptom)
+    - i have [breathing problems](symptom) and [runny nose](symptom)
+    - i get [rashes](symptom) and my [lips swell](symptom)
+    - [runny nose](symptom) and [sneezing](symptom)
+    - a [fever](symptom) and also [vomiting](symptom)
+    - I have [red](symptom) eye and [itching](symptom)
+    - I'm dealing with [watery eyes](symptom) and [discomfort in my eyes](symptom:discomfort)
+    - both [eye irritation](symptom) and [swelling around my eyes](symptom:swelling around eyes)
+    - a [fever](symptom) and I am also having [chills](symptom)
+    - my symptoms are a [cough with phlegm](symptom) and [chest pain](symptom)
+    - I have [shortness of breath](symptom) and a [mild fever](symptom)
+    - a [headache](symptom) and I am [sweating](symptom)
+    - I have a [sore throat](symptom) and a [runny nose](symptom)
+    - my symptoms are [nausea](symptom) and a [headache](symptom)
+    - I have a [fever](symptom) and a bad [cough](symptom)
 
 - intent: greet
   examples: |
@@ -101,18 +118,15 @@ nlu:
     - goodbye
     - see you
     - take care
+    - re
 
-- intent: affirm
+- intent: nlu_fallback
   examples: |
-    - yes
-    - yeah
-    - that’s right
-    - correct
-    - sure
-
-- intent: deny
-  examples: |
-    - no
-    - not really
-    - nope
-    - I don’t think so
+    - ki re bokachoda
+    - asdfasdfasdf
+    - what is the weather today
+    - can you book a flight
+    - i want to order a pizza
+    - blah blah blah
+    - tell me a joke
+    - abdsjdshds

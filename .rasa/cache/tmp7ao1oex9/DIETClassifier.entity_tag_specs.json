@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-symptom",
+      "2": "I-symptom",
+      "3": "L-symptom",
+      "4": "U-symptom",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-symptom": 1,
+      "I-symptom": 2,
+      "L-symptom": 3,
+      "U-symptom": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

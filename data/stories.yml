@@ -1,24 +1,20 @@
 version: "3.1"
 stories:
-
-- story: greet and report symptoms
+- story: Full conversation path with ambiguity
   steps:
-    - intent: greet
-    - action: utter_greet
-    - intent: report_symptoms
-    - action: utter_confirm_symptoms
-
-- story: user says goodbye
-  steps:
-    - intent: goodbye
-    - action: utter_goodbye
-
-- story: user affirms
-  steps:
-    - intent: affirm
-    - action: utter_affirm
-
-- story: user denies
-  steps:
-    - intent: deny
-    - action: utter_deny
+  - intent: greet
+  - action: utter_greet
+  - intent: inform_symptom
+    entities:
+    - symptom: "cough"
+  - action: action_handle_symptoms
+  - intent: inform_symptom
+    entities:
+    - symptom: "runny nose"
+  - action: action_handle_symptoms  # Bot asks clarifying question here
+  - intent: inform_symptom
+    entities:
+    - symptom: "body aches"
+  - action: action_handle_symptoms  # Bot makes final diagnosis
+  - intent: goodbye
+  - action: utter_goodbye

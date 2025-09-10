@@ -1,0 +1,54 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "back": 1,
+        "deny": 2,
+        "goodbye": 3,
+        "greet": 4,
+        "inform_symptom": 5,
+        "nlu_fallback": 6,
+        "out_of_scope": 7,
+        "restart": 8,
+        "session_start": 9
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_handle_symptoms": 13,
+        "utter_cannot_diagnose": 14,
+        "utter_diagnosis_result": 15,
+        "utter_fallback": 16,
+        "utter_goodbye": 17,
+        "utter_greet": 18,
+        "utter_start_new_session_prompt": 19,
+        "utter_symptoms_acknowledged": 20
+      },
+      "entities": {
+        "symptom": 0
+      },
+      "slots": {
+        "diagnosed_0": 0,
+        "diagnosed_1": 1
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

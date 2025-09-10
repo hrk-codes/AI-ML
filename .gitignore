@@ -1,21 +1,7 @@
-# Virtual environment
 venv/
-ENV/
-.venv/
-
-# Python cache
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-
-# Rasa files
-models/
-results/
-
-# OS files
 .DS_Store
-Thumbs.db
-
-# Logs
+.env
+models/
 *.log
