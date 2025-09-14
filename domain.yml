@@ -8,6 +8,8 @@ intents:
   - goodbye
   - inform_symptom
   - nlu_fallback
+  - greet_morning
+  - goodbye_night 
 
 entities:
   - symptom
@@ -28,6 +30,10 @@ slots:
 responses:
   utter_greet:
     - text: "Hello! 👋 I am your health assistant. Please describe your symptoms."
+  utter_good_morning:
+    - text: "Good morning! ☀️ I hope you're starting your day feeling well. How can I help you today?"
+  utter_good_night:
+    - text: "Good night! 🌙 Thank you for chatting. Rest well and stay healthy."
   utter_goodbye:
     - text: "Goodbye! Stay healthy."
   utter_fallback:

@@ -1,132 +1,185 @@
 version: "3.1"
 nlu:
-# NEW, LARGER SYNONYM LIST TO HANDLE TYPOS
-- synonym: watery eyes
+- synonym: watery eyes #
+  examples: | #
+    - watery #
+    - wtery eyes #
+    - watery eye #
+- synonym: swelling #
+  examples: | #
+    - swollen #
+- synonym: fever #
+  examples: | #
+    - fevver #
+    - temprature #
+    - high temperature
+- synonym: runny nose #
+  examples: | #
+    - runnnyy nose #
+    - runy nose #
+    - dripping nose
+- synonym: sore throat #
+  examples: | #
+    - sore thoroat #
+    - sore throate #
+    - throat pain #
+- synonym: cough #
+  examples: | #
+    - coughing #
+- synonym: headache #
+  examples: | #
+    - head ache #
+- synonym: dizziness #
+  examples: | #
+    - dizzy #
+    - feeling dizzy
+- synonym: blisters
   examples: |
-    - watery
-    - wtery eyes
-    - watery eye
-- synonym: swelling
+    - blister
+    - skin blisters
+- synonym: chest tightness
   examples: |
-    - swollen
-- synonym: fever
+    - tight chest
+    - tightness in my chest
+- synonym: sensitivity to light
   examples: |
-    - fevver
-    - temprature
-- synonym: runny nose
+    - sensivity to light
+    - light sensitivity
+    - lights bother me
+- synonym: sensitivity to sound
   examples: |
-    - runnnyy nose
-    - runy nose
-- synonym: sore throat
-  examples: |
-    - sore thoroat
-    - sore throate
-    - throat pain
-- synonym: cough
-  examples: |
-    - coughing
-- synonym: headache
-  examples: |
-    - head ache
-- synonym: dizziness
-  examples: |
-    - dizzy
+    - sensivity to sound
+    - sound sensitivity
+    - sounds bother me
 
-- intent: inform_symptom
-  examples: |
+- intent: inform_symptom #
+  examples: | #
     # --- Allergy Symptoms ---
-    - I am suffering from [itching](symptom)
-    - my whole body is [itchy](symptom)
-    - I have [swelling](symptom)
-    - there are [rashes](symptom) on my body
-    - I have some [skin irritation](symptom)
-    - My [tongue is swelling](symptom:tongue swelling)
-    - My eyes are [red](symptom)
-    - i have [red eyes](symptom:red)
-    - I have [watery eyes](symptom)
-    - my eyes are [watery](symptom)
-    - i have [watery eyes](symptom) during pollen season
-    - there is a [burning sensation](symptom) in my eyes
-    - my eyes are [swollen](symptom)
-    - my eyes are [swelling](symptom)
-    - I have some [eye irritation](symptom)
-    - My [lips swell](symptom)
-    - I have a [breathing problem](symptom)
-    - i have [breathing problems](symptom) during season change
+    - I am suffering from [itching](symptom) #
+    - my whole body is [itchy](symptom) #
+    - I have [swelling](symptom) #
+    - there are [rashes](symptom) on my body #
+    - I have some [skin irritation](symptom) #
+    - My [tongue is swelling](symptom:tongue swelling) #
+    - My eyes are [red](symptom) #
+    - i have [red eyes](symptom:red) #
+    - I have [watery eyes](symptom) #
+    - my eyes are [watery](symptom) #
+    - i have [watery eyes](symptom) during pollen season #
+    - there is a [burning sensation](symptom) in my eyes #
+    - my eyes are [swollen](symptom) #
+    - my eyes are [swelling](symptom) #
+    - I have some [eye irritation](symptom) #
+    - My [lips swell](symptom) #
+    - I have a [breathing problem](symptom) #
+    - i have [breathing problems](symptom) during season change #
     # --- Fever Symptoms ---
-    - I feel [nausea](symptom) after eating
-    - I have [stomach pain](symptom) after food
-    - I keep [sneezing](symptom)
-    - my nose is [blocked](symptom)
-    - I have a [runny nose](symptom)
-    - I can't stop [coughing](symptom)
-    - I feel [dizziness](symptom)
-    - my nose gets [blocked during winter](symptom:blocked nose)
-    - I get [runny nose](symptom) in monsoon
-    - I think I have a [high fever](symptom)
-    - my temperature is very high
-    - suffering from a severe [headache](symptom)
-    - I have terrible [joint pain](symptom)
-    - my joints are aching
-    - my muscles are very sore, I have [muscle pain](symptom)
-    - I feel [pain behind my eyes](symptom)
-    - I'm feeling very tired and have [weakness](symptom)
-    - I don't feel like eating, I have [loss of appetite](symptom)
-    - I have a [fever](symptom)
-    - my [throat is sore](symptom:sore throat)
-    - my whole body hurts, I have [body aches](symptom)
-    - I feel extreme [fatigue](symptom)
-    - I am having terrible [chills](symptom)
-    - I can't stop shivering and I feel cold
-    - I'm [sweating](symptom) a lot
-    - my cough has phlegm
-    - I am [coughing up phlegm](symptom:cough with phlegm)
-    - It's hard to breathe, I have [shortness of breath](symptom)
-    - I have some [chest pain](symptom) when I breathe
-    - It is just a [mild fever](symptom)
-    # --- Multi-Symptom Examples ---
-    - I have [rashes](symptom) and [dizziness](symptom)
-    - My symptoms are [sneezing](symptom) and a [runny nose](symptom)
-    - I feel [dizziness](symptom) and I have a [breathing problem](symptom)
-    - [red](symptom) eyes and [swelling](symptom)
-    - i have [breathing problems](symptom) and [runny nose](symptom)
-    - i get [rashes](symptom) and my [lips swell](symptom)
-    - [runny nose](symptom) and [sneezing](symptom)
-    - a [fever](symptom) and also [vomiting](symptom)
-    - I have [red](symptom) eye and [itching](symptom)
-    - I'm dealing with [watery eyes](symptom) and [discomfort in my eyes](symptom:discomfort)
-    - both [eye irritation](symptom) and [swelling around my eyes](symptom:swelling around eyes)
-    - a [fever](symptom) and I am also having [chills](symptom)
-    - my symptoms are a [cough with phlegm](symptom) and [chest pain](symptom)
-    - I have [shortness of breath](symptom) and a [mild fever](symptom)
-    - a [headache](symptom) and I am [sweating](symptom)
-    - I have a [sore throat](symptom) and a [runny nose](symptom)
-    - my symptoms are [nausea](symptom) and a [headache](symptom)
-    - I have a [fever](symptom) and a bad [cough](symptom)
+    - I feel [nausea](symptom) after eating #
+    - I have [stomach pain](symptom) after food #
+    - I keep [sneezing](symptom) #
+    - my nose is [blocked](symptom) #
+    - I have a [runny nose](symptom) #
+    - I can't stop [coughing](symptom) #
+    - I feel [dizziness](symptom) #
+    - my nose gets [blocked during winter](symptom:blocked nose) #
+    - I get [runny nose](symptom) in monsoon #
+    - I think I have a [high fever](symptom) #
+    - my temperature is very high #
+    - suffering from a severe [headache](symptom) #
+    - I have terrible [joint pain](symptom) #
+    - my joints are aching #
+    - my muscles are very sore, I have [muscle pain](symptom) #
+    - I feel [pain behind my eyes](symptom) #
+    - I'm feeling very tired and have [weakness](symptom) #
+    - I don't feel like eating, I have [loss of appetite](symptom) #
+    - I have a [fever](symptom) #
+    - my [throat is sore](symptom:sore throat) #
+    - my whole body hurts, I have [body aches](symptom) #
+    - I feel extreme [fatigue](symptom) #
+    - I am having terrible [chills](symptom) #
+    - I can't stop shivering and I feel cold #
+    - I'm [sweating](symptom) a lot #
+    - I am [coughing up phlegm](symptom:cough with phlegm) #
+    - It's hard to breathe, I have [shortness of breath](symptom) #
+    - I have some [chest pain](symptom) when I breathe #
+    - It is just a [mild fever](symptom) #
+    # --- Gastric Symptoms ---
+    - I have severe [stomach pain](symptom) #
+    - my stomach is [bloating](symptom) #
+    - i feel a [burning ache in my stomach](symptom:burning ache in stomach) #
+    - I always [feel full](symptom:feeling full) after eating just a little #
+    - I have [heartburn](symptom) #
+    - it feels like there is [sour liquid](symptom) in my throat #
+    - i have a [sour taste](sympton:sour taste) #
+    - there's a [burning stomach pain](symptom) at night #
+    - i have an [intolerance to fatty foods](symptom) #
+    - i am suffering from [regurgitation of food](symptom) #
+    # --- Migraine Symptoms ---
+    - I have a [throbbing headache](symptom) #
+    - my [headache is on one side](symptom:headache on one side) #
+    - I have a high [sensitivity to light](symptom) #
+    - I'm experiencing [sensitivity to sound](symptom) #
+    - lights and sounds are making my headache worse #
+    # --- UTI Symptoms ---
+    - I feel [pain during urination](symptom) #
+    - there is a [burning sensation](symptom) when I pee #
+    - I have a constant urge for [frequent urination](symptom) #
+    - my urine is [cloudy](symptom:cloudy urine) #
+    - I have [pelvic pain](symptom) #
+    # --- Eye & Throat Symptoms ---
+    - my eye has a [gritty feeling](symptom:gritty feeling in eye) #
+    - there is [eye discharge](symptom) from my eye #
+    - I wake up with [crusty eyelids](symptom) #
+    - I have a lot of [tearing](symptom) in one eye #
+    - i have [pain when swallowing](symptom) #
+    - I can see [white patches on my tonsils](symptom) #
+    - my tonsils are [swollen](symptom:swollen tonsils) #
+    - there are [tiny red spots on the roof of my mouth](symptom) #
+    # --- Chronic & Viral Condition Symptoms ---
+    - I have an [itchy rash](symptom)
+    - my skin has small [blisters](symptom)
+    - I think I have a [skin rash](symptom) #
+    - my eyes are very [red](symptom:red eyes)
+    - I can hear a [wheezing](symptom) sound when I breathe
+    - my chest feels very tight, I have [chest tightness](symptom)
+    - my friends say I have [pale skin](symptom)
+    - I often have [cold hands](symptom)
+    - I always have [cold feet](symptom)
+    - I feel a constant [increased thirst](symptom) #
+    - I have been losing weight for no reason, [unexplained weight loss](symptom) #
+    - I'm experiencing [extreme hunger](symptom) #
+    - sometimes my eyesight gets blurry, I have [blurred vision](symptom) #
 
-- intent: greet
-  examples: |
-    - hello
-    - hi
-    - hey
-    - good morning
-    - good evening
+- intent: greet #
+  examples: | #
+    - hello #
+    - hi #
+    - hey #
 
-- intent: goodbye
-  examples: |
-    - bye
-    - goodbye
-    - see you
-    - take care
-    - re
+- intent: greet_morning #
+  examples: | #
+    - good morning #
+    - Good Morning #
+    - gm #
 
-- intent: nlu_fallback
-  examples: |
-    - ki re bokachoda
-    - asdfasdfasdf
-    - what is the weather today
-    - can you book a flight
-    - i want to order a pizza
-    - blah blah blah
-    - tell me a joke
-    - abdsjdshds
+- intent: goodbye_night #
+  examples: | #
+    - good night #
+    - Good night #
+    - gn #
+
+- intent: goodbye #
+  examples: | #
+    - bye #
+    - goodbye #
+    - see you #
+    - take care #
+
+- intent: nlu_fallback #
+  examples: | #
+    - asdfasdfasdf #
+    - what is the weather today #
+    - can you book a flight #
+    - i want to order a pizza #
+    - blah blah blah #
+    - tell me a joke #

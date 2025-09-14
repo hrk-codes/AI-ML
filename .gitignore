@@ -10,8 +10,9 @@ __pycache__/
 # Environment files
 .env
 
-# macOS files
+# OS files
 .DS_Store
+Thumbs.db
 
 # Rasa-specific files
 .rasa/
@@ -21,3 +22,7 @@ models/
 *.log
 *.sqlite3
 *.tar.gz
+
+# IDE files
+.vscode/
+.idea/

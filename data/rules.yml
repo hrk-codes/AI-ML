@@ -10,6 +10,20 @@ rules:
   - intent: inform_symptom
   - action: action_handle_symptoms
 
+# (in rules.yml)
+
+- rule: Greet user in the morning # NEW RULE
+  steps:
+  - intent: greet_morning
+  - action: utter_good_morning
+
+- rule: Say good night # NEW RULE
+  steps:
+  - intent: goodbye_night
+  - action: utter_good_night
+
+# ... (existing rules like "Greet user", "Handle symptom input", etc.)
+
 - rule: Say goodbye
   steps:
   - intent: goodbye
