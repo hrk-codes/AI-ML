@@ -1,29 +1,38 @@
 recipe: default.v1
+assistant_id: 20250915-213432-moderato-dingo # Your assistant ID
+
 language: en
 
 pipeline:
+# This pipeline is tuned for better entity recognition.
 - name: WhitespaceTokenizer
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
-  analyzer: char_wb
+  analyzer: "char_wb"
   min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
   epochs: 100
+  constrain_similarities: true
+  # ADDED: These parameters help the model focus better on entity extraction.
+  entity_recognition: true
+  model_confidence: "softmax"
 - name: EntitySynonymMapper
 - name: ResponseSelector
   epochs: 100
 - name: FallbackClassifier
-  # This threshold is now higher, making the bot stricter.
-  threshold: 0.7
+  threshold: 0.4 # Slightly adjusted for better confidence
   ambiguity_threshold: 0.1
 
 policies:
-- name: RulePolicy
 - name: MemoizationPolicy
+- name: RulePolicy
+- name: UnexpecTEDIntentPolicy
+  max_history: 5
+  epochs: 100
 - name: TEDPolicy
   max_history: 5
   epochs: 100
-assistant_id: 20250907-184156-emerald-helm
+  constrain_similarities: true
